@@ -1,5 +1,213 @@
-.slider {
-	background-color: black;
-	height: 50%;
-	display: block;
+/* Variables */
+
+$color-one: #1e90ff;
+$color-two: #eccc68;
+$color-three: #2ed573;
+$color-main: #2f3542;
+
+$font-text: 'Merriweather', serif;
+$font-header: 'Lato', sans-serif;
+
+$transition: all 1s;
+/* Global */
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
+
+body {
+    margin: 0;
+    line-height: 1.23;
+    font-family: $font-text;
+    color: $color-main;
+    background: #fff;
+}
+
+h1, h2, h3 {
+    font-family: $font-header; 
+    font-weight: 100;
+    line-height: 1.02;
+
+}
+
+.container {
+    max-width: 1140px;
+    padding: 0 27px;
+    margin: 12px auto;
+}
+
+.section {
+    padding: 96px 0;
+}
+
+
+
+.btn {
+    display: inline-block;
+    margin: 12px auto 0 auto;
+    padding: 12px 21px;
+    border-radius: 6px;
+    font-family: $font-header;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    background-position: 100% 0;
+    background-size: 300%;
+    transition: $transition;  
+    color: $color-main; 
+    font-weight: 900; 
+    text-transform: uppercase;
+    
+    &:hover {
+        background-position: 0 100% ;  
+        color: #fff;
+    }
+}
+
+.btn-one {
+    border-color: $color-main;
+    background-image: linear-gradient(69deg, $color-main 50%, transparent 50%);
+}
+
+.section-title {width: 100%; 
+    position: relative;
+    margin: 27px 0 21px 0;
+    text-align: center;
+    font-weight: 900; font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 3px; 
+    
+    &::after {
+        position: absolute;
+        content: '';
+        bottom: -12px; 
+        left: 50%;
+        width: 12%;
+        height: 3px;
+        transform: translateX(-50%);
+        background: $color-three;
+        opacity: 27%;
+    }
+} 
+
+
+/* Navigation */
+
+.navigation {
+    background: $color-two;
+    padding: 12px 0; 
+    height: auto;
+            
+            ul {
+                position: relative;
+                padding: 0; 
+                margin: 0;
+                list-style-type: none;
+                
+                a {
+                    text-decoration: none;  
+                    color: $color-main;    
+                    font-size: 18px;
+                    font-variant: small-caps;
+                    letter-spacing: -1px;
+                    
+                    &:hover {
+                        color: $color-one;
+                    }
+                }
+            }
+            
+            li {  
+                font-family: $font-header; 
+                font-weight: 900;
+                display: inline-block;
+                margin-right: 12px;
+                position: relative;
+                
+                ul {
+                    display: none;    
+                    position: absolute;
+                    background: #fff;
+                    left: 50%;
+                    transform: translatex(-50%);
+                }
+                
+                &:hover ul {
+                    display: block;
+                }
+                
+                ul a {
+                  
+                    letter-spacing: 3px;
+                    font-weight: 400; 
+                    font-size: 15px;
+                    &:hover {
+                        color: $color-three;
+                    }
+                }
+                
+                ul li {  
+                    display: block;
+                    margin: 0;
+                    padding: 12px 12px;
+                    transition: $transition;
+                    text-align: center;
+                }
+            }
+}
+
+
+.splash {
+    background: $color-two;  
+    display: flex; 
+}
+
+.splash-inner {  
+    margin: 12px;
+    right: 12px; 
+    top: -45px; text-align: center; width: 100%;
+    
+    p { 
+        top: -45px; 
+        font-size: 21px; 
+        letter-spacing: 0;
+    }
+
+    h1 {  
+        margin: 21px; 
+    }
+    
+    h2 {
+        margin: 18px 0;
+    }
+   
+}
+
+.page-title {
+    color: #fff;
+    margin: 0; 
+    right: 12px; 
+    top: 21px;
+    font-size: 51px;
+    font-style: italic;
+    letter-spacing: -3px;
+    word-spacing: 3px;  
+    
+    span {
+        font-weight: 700;
+        font-style: normal;
+        font-size: 57px;
+        letter-spacing: 0;
+    }
+}
+
+.page-subtitle {
+    font-family: $font-text;
+    font-weight: 400;
+    font-size: 18px;
+    font-variant: small-caps;
+    word-spacing: 3px;   
+ }
