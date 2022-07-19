@@ -22,14 +22,12 @@ body {
     color: $color-main;
     background: #fff;
 }
-
 h1, h2, h3 {
     font-family: $font-header; 
     font-weight: 100;
     line-height: 1.02;
 
 }
-
 .container {
     max-width: 1140px;
     padding: 0 27px;
@@ -39,9 +37,6 @@ h1, h2, h3 {
 .section {
     padding: 96px 0;
 }
-
-
-
 .btn {
     display: inline-block;
     margin: 12px auto 0 auto;
@@ -52,24 +47,23 @@ h1, h2, h3 {
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    border-width: 1px;
-    border-style: solid;
     background-position: 100% 0;
     background-size: 300%;
     transition: $transition;  
-    color: $color-main; 
+    color: $color-three; 
+    background-color: #fff;
     font-weight: 900; 
     text-transform: uppercase;
+    border: none;
     
     &:hover {
         background-position: 0 100% ;  
-        color: #fff;
+        color: $color-one;
     }
 }
 
 .btn-one {
-    border-color: $color-main;
-    background-image: linear-gradient(69deg, $color-main 50%, transparent 50%);
+    background-image: linear-gradient(69deg, $color-two 50%, transparent 50%);
 }
 
 .section-title {width: 100%; 
@@ -94,98 +88,30 @@ h1, h2, h3 {
 } 
 
 
+
 /* Navigation */
-
-.navigation {
-    background: $color-two;
-    padding: 12px 0; 
-    height: auto;
-            
-            ul {
-                position: relative;
-                padding: 0; 
-                margin: 0;
-                list-style-type: none;
-                
-                a {
-                    text-decoration: none;  
-                    color: $color-main;    
-                    font-size: 18px;
-                    font-variant: small-caps;
-                    letter-spacing: -1px;
-                    
-                    &:hover {
-                        color: $color-one;
-                    }
-                }
-            }
-            
-            li {  
-                font-family: $font-header; 
-                font-weight: 900;
-                display: inline-block;
-                margin-right: 12px;
-                position: relative;
-                
-                ul {
-                    display: none;    
-                    position: absolute;
-                    background: #fff;
-                    left: 50%;
-                    transform: translatex(-50%);
-                }
-                
-                &:hover ul {
-                    display: block;
-                }
-                
-                ul a {
-                  
-                    letter-spacing: 3px;
-                    font-weight: 400; 
-                    font-size: 15px;
-                    &:hover {
-                        color: $color-three;
-                    }
-                }
-                
-                ul li {  
-                    display: block;
-                    margin: 0;
-                    padding: 12px 12px;
-                    transition: $transition;
-                    text-align: center;
-                }
-            }
+.navigation {background-color: transparent; padding: 12px 12%;}
+.navbar-toggler {position: relative;}
+.navbar-brand {font-size: 1.44em;
+	font-weight: 700; font-style: italic;
+	font-family: $font-text; color: $color-two;letter-spacing: -1px;
+	&:hover {color: $color-main;}
+}
+.navbar-nav a {
+	font-family: $font-header; letter-spacing: 1px;
+	font-variant: small-caps;
+	font-weight: 900;
+	color: #fff;
+	&:hover {
+		color: $color-one;
+	}
 }
 
-
-.splash {
-    background: $color-two;  
-    display: flex; 
+/* Slider */
+.carousel-inner {position: absolute; top: 0; z-index: -1;
+	height: 100vh;
 }
-
-.splash-inner {  
-    margin: 12px;
-    right: 12px; 
-    top: -45px; text-align: center; width: 100%;
-    
-    p { 
-        top: -45px; 
-        font-size: 21px; 
-        letter-spacing: 0;
-    }
-
-    h1 {  
-        margin: 21px; 
-    }
-    
-    h2 {
-        margin: 18px 0;
-    }
-   
-}
-
+.carousel-caption {top:27%; left: 21%; transform: translatex(-50%, -50%);}
 .page-title {
     color: #fff;
     margin: 0; 
@@ -211,3 +137,4 @@ h1, h2, h3 {
     font-variant: small-caps;
     word-spacing: 3px;   
  }
+
